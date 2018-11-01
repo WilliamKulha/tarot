@@ -710,5 +710,18 @@ const rider_waite_cards =
 
 $(function() {
   let currentDeck = new Deck(rider_waite_cards);
-  console.log(currentDeck.cards[4]);
+  $('#three').click(function() {
+    $(`#spread_choice`).slideUp();
+    $(`#deck_area`).slideDown();
+    //$(`#rule_of_three`).slideDown();
+  });
+  $('#true_love').click(function() {
+    $(`#spread_choice`).slideUp();
+    $(`#deck_area`).slideDown();
+    //$(`#true_love_spread`).slideDown();
+  });
+  $(`#success`).click(function() {
+    $(`#spread_choice`).slideUp();
+    $(`#deck_area`).slideDown();
+  });
 });
