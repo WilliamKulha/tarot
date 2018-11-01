@@ -1,5 +1,5 @@
-function Deck ([cards]) {
-  this.cards = [cards];
+function Deck (cards) {
+  this.cards = cards;
 }
 
 const rider_waite_cards =
@@ -707,3 +707,8 @@ const rider_waite_cards =
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/king-of-swords/`
   }
 ]
+
+$(function() {
+  let currentDeck = new Deck(rider_waite_cards);
+  console.log(currentDeck.cards[4]);
+});
