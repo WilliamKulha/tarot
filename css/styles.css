@@ -54,3 +54,16 @@ body {
 button {
   width:10em !important;
 }
+
+.spread_display {
+  margin-top:3em;
+}
+
+#spread_name {
+  margin:1em;
+}
+
+.drawn_card {
+  height: 75%;
+  width: 75%;
+}
