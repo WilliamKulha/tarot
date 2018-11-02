@@ -1,49 +1,69 @@
-function Deck (cards) {
-  this.cards = cards;
-  this.spread = 0;
-  this.drawnCards = [];
+//Business Logic
+
+let determineOrientation = function(cardNumber) {
+  let orientation = Math.round((Math.random() * 1) + 0);
+  if (orientation === 1) {
+    rider_waite_cards[cardNumber].orientation.push(1)
+  } else {
+    rider_waite_cards[cardNumber].orientation.push(0)
+  }
 }
 
-Deck.prototype.draw = function() {
-  console.log(this.cards);
+let drawThree = function() {
   let currentCardNumber = Math.floor((Math.random() * 77) + 0);
-  let determineOrientation = Math.round((Math.random() * 1) + 0);
-  if (determineOrientation === 1) {
-    this.cards[currentCardNumber].orientation.push(1)
-  } else {
-    this.cards[currentCardNumber].orientation.push(0)
-  }
-  this.drawnCards.push(this.cards[currentCardNumber]);
-  if (this.drawnCards.length <= this.spread) {
-    if(this.spread === 3) {
-      $(`#rule_of_three`).find(`.${this.drawnCards.length}`).append(`<img src=${this.cards[currentCardNumber].img} class="drawn_card" alt="A tarot card">`)
-      if (this.cards[currentCardNumber].orientation[0] !== 0) {
-        $(`#rule_of_three`).find(`.${this.drawnCards.length}`).children('img').addClass('flipped')
-      }
-    } else if (this.spread === 6) {
-      $(`#true_love_spread`).find(`.${this.drawnCards.length}`).append(`<img src=${this.cards[currentCardNumber].img} class="drawn_card" alt="A tarot card">`)
-      if (this.cards[currentCardNumber].orientation[0] !== 0) {
-        $(`#true_love_spread`).find(`.${this.drawnCards.length}`).children('img').addClass('flipped')
-      }
-    } else if (this.spread === 5) {
-      $(`#success_spread`).find(`.${this.drawnCards.length}`).append(`<img src=${this.cards[currentCardNumber].img} class="drawn_card" alt="A tarot card">`)
-      if (this.cards[currentCardNumber].orientation[0] !== 0) {
-        $(`#success_spread`).find(`.${this.drawnCards.length}`).children('img').addClass('flipped')
-      }
+  determineOrientation(currentCardNumber);
+  drawnCards.push(rider_waite_cards[currentCardNumber]);
+  if (drawnCards.length <= spread) {
+    //addind the popover only displays the show more info as a hyperlink beneath each image.
+    $(`#rule_of_three`).find(`.${drawnCards.length}`).append(`<img src=${rider_waite_cards[currentCardNumber].img} class="drawn_card" alt="${rider_waite_cards[currentCardNumber].name}">`)
+    if (rider_waite_cards[currentCardNumber].orientation[0] !== 0) {
+      $(`#rule_of_three`).find(`.${drawnCards.length}`).children('img').addClass('flipped')
     }
-  } else {
-    return false;
   }
-  this.cards.splice(currentCardNumber, 1);
+  rider_waite_cards.splice(currentCardNumber, 1);
 }
 
-Deck.prototype.stopDraws = function() {
-  if (this.drawnCards.length === this.spread) {
+let drawTrueLove = function() {
+  let currentCardNumber = Math.floor((Math.random() * 77) + 0);
+  determineOrientation(currentCardNumber);
+  drawnCards.push(rider_waite_cards[currentCardNumber]);
+  if (drawnCards.length <= spread) {
+    //addind the popover only displays the show more info as a hyperlink beneath each image.
+    $(`#true_love_spread`).find(`.${drawnCards.length}`).append(`<img src=${rider_waite_cards[currentCardNumber].img} class="drawn_card" alt="${rider_waite_cards[currentCardNumber].name}">`)
+    if (rider_waite_cards[currentCardNumber].orientation[0] !== 0) {
+      $(`#true_love_spread`).find(`.${drawnCards.length}`).children('img').addClass('flipped')
+    }
+  }
+  rider_waite_cards.splice(currentCardNumber, 1);
+}
+
+let drawSuccess = function() {
+  let currentCardNumber = Math.floor((Math.random() * 77) + 0);
+  determineOrientation(currentCardNumber);
+  drawnCards.push(rider_waite_cards[currentCardNumber]);
+  if (drawnCards.length <= spread) {
+    //addind the popover only displays the show more info as a hyperlink beneath each image.
+    $(`#success_spread`).find(`.${drawnCards.length}`).append(`<img src=${rider_waite_cards[currentCardNumber].img} class="drawn_card" alt="${rider_waite_cards[currentCardNumber].name}">`)
+    if (rider_waite_cards[currentCardNumber].orientation[0] !== 0) {
+      $(`#success_spread`).find(`.${drawnCards.length}`).children('img').addClass('flipped')
+    }
+  }
+  rider_waite_cards.splice(currentCardNumber, 1);
+}
+
+checkIfAllDrawn = function() {
+  if (drawnCards.length === spread) {
     $(`#deck_area`).slideUp();
   } else {
     return false
   }
 }
+
+let hideAndShow = function() {
+  $(`#spread_choice`).slideUp();
+  $(`#deck_area`).slideDown();
+}
+
 
 const rider_waite_cards =
 [
@@ -751,37 +771,37 @@ const rider_waite_cards =
   }
 ]
 
-let currentDeck = new Deck(rider_waite_cards);
+let spread = 0;
+let drawnCards = [];
+
+//User Logic
 
 $(function() {
   $('#three').click(function() {
-    currentDeck.spread = 3;
-    $(`#spread_choice`).slideUp();
-    $(`#deck_area`).slideDown();
-    $(`#rule_of_three`).slideDown();
+    spread = 3;
+    hideAndShow();
+    $('#rule_of_three').show();
     $(`#deckDraw`).click(function() {
-      currentDeck.draw();
-      currentDeck.stopDraws();
+      drawThree();
+      checkIfAllDrawn();
     });
   });
   $('#true_love').click(function() {
-    currentDeck.spread = 6;
-    $(`#spread_choice`).slideUp();
-    $(`#deck_area`).slideDown();
-    $(`#true_love_spread`).slideDown();
+    spread = 6;
+    hideAndShow();
+    $('#true_love_spread').show();
     $(`#deckDraw`).click(function() {
-      currentDeck.draw();
-      currentDeck.stopDraws();
+      drawTrueLove();
+      checkIfAllDrawn();
     });
   });
   $(`#success`).click(function() {
-    currentDeck.spread = 5;
-    $(`#spread_choice`).slideUp();
-    $(`#deck_area`).slideDown();
-    $(`#success_spread`).slideDown();
+    spread = 5;
+    hideAndShow();
+    $('#success_spread').show();
     $(`#deckDraw`).click(function() {
-      currentDeck.draw();
-      currentDeck.stopDraws();
+      drawSuccess();
+      checkIfAllDrawn();
     });
   });
 });

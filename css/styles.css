@@ -68,6 +68,10 @@ button {
   width: 75%;
 }
 
+.drawn_card:hover {
+  cursor:pointer;
+}
+
 img.flipped {
   transform: rotate(180deg);
 }
