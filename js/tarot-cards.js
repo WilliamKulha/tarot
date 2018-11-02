@@ -738,7 +738,6 @@ $(function() {
     currentDeck.spread = 3;
     $(`#spread_choice`).slideUp();
     $(`#deck_area`).slideDown();
-    $(`.users_spread_here`).text(`Rule of Three`)
     $(`#rule_of_three`).slideDown();
     $(`#deckDraw`).click(function() {
       currentDeck.draw();
@@ -748,7 +747,6 @@ $(function() {
     currentDeck.spread = 6;
     $(`#spread_choice`).slideUp();
     $(`#deck_area`).slideDown();
-    $(`.users_spread_here`).text(`True Love`)
     $(`#true_love_spread`).slideDown();
     $(`#deckDraw`).click(function() {
       currentDeck.draw();
@@ -758,7 +756,6 @@ $(function() {
     currentDeck.spread = 5;
     $(`#spread_choice`).slideUp();
     $(`#deck_area`).slideDown();
-    $(`.users_spread_here`).text(`Success`)
     $(`#success_spread`).slideDown();
     $(`#deckDraw`).click(function() {
       currentDeck.draw();
