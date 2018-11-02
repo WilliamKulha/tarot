@@ -71,7 +71,3 @@ button {
 .drawn_card:hover {
   cursor:pointer;
 }
-
-img.flipped {
-  transform: rotate(180deg);
-}

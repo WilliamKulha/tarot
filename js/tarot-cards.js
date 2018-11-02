@@ -1,5 +1,13 @@
 //Business Logic
 
+$(document).on("click",".drawn_card", function () {
+   let clicked = $(this);
+   $(clicked).fadeOut('slow');
+   $(clicked).next().fadeIn();
+
+});
+
+
 let determineOrientation = function(cardNumber) {
   let orientation = Math.round((Math.random() * 1) + 0);
   if (orientation === 1) {
@@ -30,6 +38,7 @@ let drawTrueLove = function() {
   if (drawnCards.length <= spread) {
     //addind the popover only displays the show more info as a hyperlink beneath each image.
     $(`#true_love_spread`).find(`.${drawnCards.length}`).append(`<img src=${rider_waite_cards[currentCardNumber].img} class="drawn_card" alt="${rider_waite_cards[currentCardNumber].name}">`)
+    $(`#true_love_spread`).find(`.${drawnCards.length}-description`).append(`<h4>${rider_waite_cards[currentCardNumber].name}</h4><br><h6>Meaning</h6><br><p>${rider_waite_cards[currentCardNumber].meta_upright}</p><br><h6>Reverse</h6><br><p>${rider_waite_cards[currentCardNumber].meta_reversed}</p><br><a href="${rider_waite_cards[currentCardNumber].meta_more_info_link}">More Information</a>`)
     if (rider_waite_cards[currentCardNumber].orientation[0] !== 0) {
       $(`#true_love_spread`).find(`.${drawnCards.length}`).children('img').addClass('flipped')
     }
