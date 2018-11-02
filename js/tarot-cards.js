@@ -48,7 +48,7 @@ const rider_waite_cards =
   {
     name: 'The High Priestess',
     number: 2,
-    img: `img/deck/02_High_Priestess`,
+    img: `img/deck/02_High_Priestess.jpg`,
     orientation: [],
     meta_upright: `Intuition, sacred knowledge, divine feminine, the subconscious mind`,
     meta_reversed: `Secrets, disconnected from intuition, withdrawal and silence`,
