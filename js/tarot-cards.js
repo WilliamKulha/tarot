@@ -7,6 +7,7 @@ function Deck (cards) {
 
 
 Deck.prototype.draw = function() {
+  console.log(this.cards);
   let currentCardNumber = Math.floor((Math.random() * 77) + 0);
   let determineOrientation = Math.round((Math.random() * 1) + 0);
   if (determineOrientation === 1) {
@@ -19,26 +20,32 @@ Deck.prototype.draw = function() {
   console.log(this.drawnCards.length);
   if (this.drawnCards.length <= this.spread) {
     if(this.spread === 3) {
-      console.log(this.cards[currentCardNumber].img);
       $(`#rule_of_three`).find(`.${this.drawnCards.length}`).append(`<img src=${this.cards[currentCardNumber].img} class="drawn_card" alt="A tarot card">`)
-      if (this.cards[currentCardNumber].orientation[0] === 1) {
+      if (this.cards[currentCardNumber].orientation[0] !== 0) {
         $(`#rule_of_three`).find(`.${this.drawnCards.length}`).children('img').addClass('flipped')
       }
     } else if (this.spread === 6) {
-      console.log(this.cards[currentCardNumber].img);
       $(`#true_love_spread`).find(`.${this.drawnCards.length}`).append(`<img src=${this.cards[currentCardNumber].img} class="drawn_card" alt="A tarot card">`)
-      if (this.cards[currentCardNumber].orientation[0] === 1) {
+      if (this.cards[currentCardNumber].orientation[0] !== 0) {
         $(`#rule_of_three`).find(`.${this.drawnCards.length}`).children('img').addClass('flipped')
       }
     } else if (this.spread === 5) {
-      console.log(this.cards[currentCardNumber].img);
       $(`#success_spread`).find(`.${this.drawnCards.length}`).append(`<img src=${this.cards[currentCardNumber].img} class="drawn_card" alt="A tarot card">`)
-      if (this.cards[currentCardNumber].orientation[0] === 1) {
+      if (this.cards[currentCardNumber].orientation[0] !== 0) {
         $(`#rule_of_three`).find(`.${this.drawnCards.length}`).children('img').addClass('flipped')
       }
     }
   } else {
     return false;
+  }
+  this.cards.splice(currentCardNumber, 1);
+}
+
+Deck.prototype.stopDraws = function() {
+  if (this.drawnCards.length === this.spread) {
+    $(`#deck_area`).slideUp();
+  } else {
+    return false
   }
 }
 
@@ -758,6 +765,7 @@ $(function() {
     $(`#rule_of_three`).slideDown();
     $(`#deckDraw`).click(function() {
       currentDeck.draw();
+      currentDeck.stopDraws();
     });
   });
   $('#true_love').click(function() {
@@ -767,6 +775,7 @@ $(function() {
     $(`#true_love_spread`).slideDown();
     $(`#deckDraw`).click(function() {
       currentDeck.draw();
+      currentDeck.stopDraws();
     });
   });
   $(`#success`).click(function() {
@@ -776,6 +785,7 @@ $(function() {
     $(`#success_spread`).slideDown();
     $(`#deckDraw`).click(function() {
       currentDeck.draw();
+      currentDeck.stopDraws();
     });
   });
 });
