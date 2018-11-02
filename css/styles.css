@@ -68,6 +68,6 @@ button {
   width: 75%;
 }
 
-.flipped {
+img.flipped {
   transform: rotate(180deg);
 }
