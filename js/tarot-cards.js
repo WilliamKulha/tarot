@@ -4,21 +4,38 @@ function Deck (cards) {
   this.drawnCards = [];
 }
 
+
+
 Deck.prototype.draw = function() {
   let currentCardNumber = Math.floor((Math.random() * 77) + 0);
+  let determineOrientation = Math.round((Math.random() * 1) + 0);
+  if (determineOrientation === 1) {
+    this.cards[currentCardNumber].orientation.push(1)
+  } else {
+    this.cards[currentCardNumber].orientation.push(0)
+  }
   console.log(this.cards[currentCardNumber]);
   this.drawnCards.push(this.cards[currentCardNumber]);
   console.log(this.drawnCards.length);
   if (this.drawnCards.length <= this.spread) {
     if(this.spread === 3) {
       console.log(this.cards[currentCardNumber].img);
-      $(`#rule_of_three`).find(`.${this.drawnCards.length}`).append(`<img src=${this.cards[currentCardNumber].img} class="drawn_card" alt="A tarot card">` )
+      $(`#rule_of_three`).find(`.${this.drawnCards.length}`).append(`<img src=${this.cards[currentCardNumber].img} class="drawn_card" alt="A tarot card">`)
+      if (this.cards[currentCardNumber].orientation[0] === 1) {
+        $(`#rule_of_three`).find(`.${this.drawnCards.length}`).children('img').addClass('flipped')
+      }
     } else if (this.spread === 6) {
       console.log(this.cards[currentCardNumber].img);
-      $(`#true_love_spread`).find(`.${this.drawnCards.length}`).append(`<img src=${this.cards[currentCardNumber].img} class="drawn_card" alt="A tarot card">` )
+      $(`#true_love_spread`).find(`.${this.drawnCards.length}`).append(`<img src=${this.cards[currentCardNumber].img} class="drawn_card" alt="A tarot card">`)
+      if (this.cards[currentCardNumber].orientation[0] === 1) {
+        $(`#rule_of_three`).find(`.${this.drawnCards.length}`).children('img').addClass('flipped')
+      }
     } else if (this.spread === 5) {
       console.log(this.cards[currentCardNumber].img);
-      $(`#success_spread`).find(`.${this.drawnCards.length}`).append(`<img src=${this.cards[currentCardNumber].img} class="drawn_card" alt="A tarot card">` )
+      $(`#success_spread`).find(`.${this.drawnCards.length}`).append(`<img src=${this.cards[currentCardNumber].img} class="drawn_card" alt="A tarot card">`)
+      if (this.cards[currentCardNumber].orientation[0] === 1) {
+        $(`#rule_of_three`).find(`.${this.drawnCards.length}`).children('img').addClass('flipped')
+      }
     }
   } else {
     return false;
