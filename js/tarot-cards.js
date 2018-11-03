@@ -1,5 +1,6 @@
 //Business Logic
 
+//Function to populate modal with clicked card information.
 $(document).on("click",".drawn_card", function () {
    let clicked = $(this).attr('id');
    console.log(clicked);
@@ -40,7 +41,6 @@ let drawTrueLove = function() {
   drawnCards.push(rider_waite_cards[currentCardNumber]);
   if (drawnCards.length <= spread) {
     $(`#true_love_spread`).find(`.${drawnCards.length}`).append(`<img src=${rider_waite_cards[currentCardNumber].img} id="${drawnCards.length - 1}" class="drawn_card" alt="${rider_waite_cards[currentCardNumber].name}" data-toggle="modal" data-target="#explanationModal">`)
-    $(`#true_love_spread`).find(`.${drawnCards.length}-name`).append()
     if (rider_waite_cards[currentCardNumber].orientation[0] !== 0) {
       $(`#true_love_spread`).find(`.${drawnCards.length}`).children('img').addClass('flipped')
     }
@@ -64,6 +64,7 @@ let drawSuccess = function() {
 checkIfAllDrawn = function() {
   if (drawnCards.length === spread) {
     $(`#deck_area`).slideUp();
+    $('.no_show').show();
   } else {
     return false
   }

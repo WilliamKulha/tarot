@@ -84,3 +84,12 @@ body {
   height:70%;
   width:70%;
 }
+
+.no_show {
+  display:none;
+}
+
+.card_position {
+  font-weight:bold;
+  font-size:.75em;
+}
