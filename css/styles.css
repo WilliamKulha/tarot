@@ -79,3 +79,8 @@ body {
 .small {
   font-size: .75em;
 }
+
+.modal_card {
+  height:70%;
+  width:70%;
+}

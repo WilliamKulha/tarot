@@ -4,8 +4,10 @@ $(document).on("click",".drawn_card", function () {
    let clicked = $(this).attr('id');
    console.log(clicked);
    $('.card_name_here').html(drawnCards[clicked].name);
+   $('.img_here').html(`<img class="modal_card" src=${drawnCards[clicked].img} alt="${drawnCards[clicked].name}">`)
    $('.reversed_meaning_here').text(drawnCards[clicked].meta_reversed);
    $('.upright_meaning_here').text(drawnCards[clicked].meta_upright);
+   $('.meta_description_here').text(drawnCards[clicked].meta_description);
    $('.more_info_link_here').html(`<a class="btn btn-info" href="${drawnCards[clicked].meta_more_info_link}" target="_blank">Learn More</a>`)
 });
 
@@ -310,7 +312,7 @@ const rider_waite_cards =
     number: 23,
     img: `img/deck/23_Two_of_Wands.jpg`,
     orientation: [],
-    meta_description: `The Two of Wands is a close relative of it's preceding card, the Ace of Wands. Here, instead of focusing on your unbridled enthusiasm for a new pursuit, a focus on careful consideration and planning is called for.`
+    meta_description: `The Two of Wands is a close relative of it's preceding card, the Ace of Wands. Here, instead of focusing on your unbridled enthusiasm for a new pursuit, a focus on careful consideration and planning is called for.`,
     meta_upright: `Future planning, progress, decisions, discovery`,
     meta_reversed: `Fear of unknown, lack of planning`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-wands/two-of-wands/`
@@ -440,7 +442,7 @@ const rider_waite_cards =
     number: 36,
     img: `img/deck/36_Ace_of_Pentacles.jpg`,
     orientation: [],
-    meta_description: `This card show prosperity and comfortable material conditions, but whether these are of advantage to the possessor will depend on whether the card is reversed or not.<br> -A.E. Waite`,
+    meta_description: `This card show prosperity and comfortable material conditions, but whether these are of advantage to the possessor will depend on whether the card is reversed or not. -A.E. Waite`,
     meta_upright: `A new financial or career opportunity, manifestation, abundance`,
     meta_reversed: `Lost opportunity, lack of planning and foresight`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-pentacles/ace-of-pentacles/`
@@ -450,7 +452,7 @@ const rider_waite_cards =
     number: 37,
     img: `img/deck/37_Two_of_Pentacles.jpg`,
     orientation: [],
-    meta_description: `On the one hand it is a card of fun, recreation and its connections, which is the subject of the design; but it is read also as news and messages in writing, as obstacles, agitation, trouble, embroilment.<br> -A.E. Waite `,
+    meta_description: `On the one hand it is a card of fun, recreation and its connections, which is the subject of the design; but it is read also as news and messages in writing, as obstacles, agitation, trouble, embroilment. -A.E. Waite `,
     meta_upright: `Multiple priorities, time management, prioritisation, adaptability`,
     meta_reversed: `Over-committed, disorganisation, reprioritisation`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-pentacles/two-of-pentacles/`
@@ -460,7 +462,7 @@ const rider_waite_cards =
     number: 38,
     img: `img/deck/38_Three_of_Pentacles.jpg`,
     orientation: [],
-    meta_description: `Métier, trade, skilled labour; usually, however, regarded as a card of nobility, aristocracy, renown, glory. <br> -A.E. Waite`,
+    meta_description: `Métier, trade, skilled labour; usually, however, regarded as a card of nobility, aristocracy, renown, glory.  -A.E. Waite`,
     meta_upright: `Teamwork, collaboration, learning, implementation`,
     meta_reversed: `Disharmony, misalignment, working alone`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-pentacles/three-of-pentacles/`
@@ -470,7 +472,7 @@ const rider_waite_cards =
     number: 39,
     img: `img/deck/39_Four_of_Pentacles.jpg`,
     orientation: [],
-    meta_description: `This card suggest the surety of possessions, cleaving to that which one has, gift, legacy, inheritance. <br> -A.E. Waite`,
+    meta_description: `This card suggest the surety of possessions, cleaving to that which one has, gift, legacy, inheritance.  -A.E. Waite`,
     meta_upright: `Saving money, security, conservatism, scarcity, control`,
     meta_reversed: `Over-spending, greed, self-protection`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-pentacles/four-of-pentacles/`
@@ -480,7 +482,7 @@ const rider_waite_cards =
     number: 40,
     img: `img/deck/40_Five_of_Pentacles.jpg`,
     orientation: [],
-    meta_description: `This card foretells material trouble above all, whether in the form illustrated--that is, destitution--or otherwise. For some cartomancists, it is a card of love and lovers-wife, husband, friend, mistress; also concordance, affinities. These alternatives cannot be harmonized. <br> -A.E. Waite`,
+    meta_description: `This card foretells material trouble above all, whether in the form illustrated--that is, destitution--or otherwise. For some cartomancists, it is a card of love and lovers-wife, husband, friend, mistress; also concordance, affinities. These alternatives cannot be harmonized.  -A.E. Waite`,
     meta_upright: `Financial loss, poverty, lack mindset, isolation, worry`,
     meta_reversed: `Recovery from financial loss, spiritual poverty`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-pentacles/five-of-pentacles/`
@@ -490,7 +492,7 @@ const rider_waite_cards =
     number: 41,
     img: `img/deck/41_Six_of_Pentacles.jpg`,
     orientation: [],
-    meta_description: `The Six of Pentacles represents presents, gifts, and gratification. Another account says the card calls for attention, vigilance, or that now is the accepted time, but especially present prosperity <br> -A.E. Waite`,
+    meta_description: `The Six of Pentacles represents presents, gifts, and gratification. Another account says the card calls for attention, vigilance, or that now is the accepted time, but especially present prosperity  -A.E. Waite`,
     meta_upright: `Giving, receiving, sharing wealth, generosity, charity`,
     meta_reversed: `Self-care, unpaid debts, one-sided charity`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-pentacles/six-of-pentacles/`
@@ -500,7 +502,7 @@ const rider_waite_cards =
     number: 42,
     img: `img/deck/42_Seven_of_Pentacles.jpg`,
     orientation: [],
-    meta_description: `A young man, leaning on his staff, looks intently at seven pentacles attached to a clump of greenery on his right; one would say that these were his treasures and that his heart was there. The meanings in this card are exceedingly contradictory; in the main, it is a card of money, business, barter; but one reading gives altercation, quarrels--and another innocence, ingenuity, and purgation. <br> -A.E. Waite `,
+    meta_description: `A young man, leaning on his staff, looks intently at seven pentacles attached to a clump of greenery on his right; one would say that these were his treasures and that his heart was there. The meanings in this card are exceedingly contradictory; in the main, it is a card of money, business, barter; but one reading gives altercation, quarrels--and another innocence, ingenuity, and purgation.  -A.E. Waite `,
     meta_upright: `Long-term view, sustainable results, perseverance, investment`,
     meta_reversed: `Lack of long-term vision, limited success or reward`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-pentacles/seven-of-pentacles/`
@@ -569,7 +571,8 @@ const rider_waite_cards =
     name: `The King of Pentacles`,
     number: 49,
     img: `img/deck/49_King_of_Pentacles.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description: ``,
     meta_upright: `Wealth, business, leadership, security, discipline, abundance`,
     meta_reversed: `Financially inept, obsessed with wealth and status, stubborn`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-pentacles/king-of-pentacles/`
@@ -578,7 +581,8 @@ const rider_waite_cards =
     name: `The Ace of Cups`,
     number: 50,
     img: `img/deck/50_Ace_of_Cups.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description: ``,
     meta_upright: `Love, new relationships, compassion, creativity`,
     meta_reversed: `Self-love, intuition, repressed emotions`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-cups/ace-of-cups/`
@@ -587,7 +591,8 @@ const rider_waite_cards =
     name: `The Two of Cups`,
     number: 51,
     img: `img/deck/51_Two_of_Cups.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description:``,
     meta_upright: `Unified love, partnership, mutual attraction`,
     meta_reversed: `Self-love, break-ups, disharmony, distrust`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-cups/two-of-cups/`
@@ -596,7 +601,8 @@ const rider_waite_cards =
     name: `The Three of Cups`,
     number: 52,
     img: `img/deck/52_Three_of_Cups.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description: ``,
     meta_upright: `Celebration, friendship, creativity, collaborations`,
     meta_reversed: `Independence, alone time, hardcore partying, ‘three’s a crowd’`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-cups/three-of-cups/`
@@ -605,7 +611,8 @@ const rider_waite_cards =
     name: `The Four of Cups`,
     number: 53,
     img: `img/deck/53_Four_of_Cups.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description: ``,
     meta_upright: `Meditation, contemplation, apathy, reevaluation`,
     meta_reversed: `Retreat, withdrawal, checking in for alignment`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-cups/four-of-cups/`
@@ -614,7 +621,8 @@ const rider_waite_cards =
     name: `The Five of Cups`,
     number: 54,
     img: `img/deck/54_Five_of_Cups.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description: ``,
     meta_upright: `Regret, failure, disappointment, pessimism`,
     meta_reversed: `Personal setbacks, self-forgiveness, moving on`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-cups/five-of-cups/`
@@ -623,7 +631,8 @@ const rider_waite_cards =
     name: `The Six of Cups`,
     number: 55,
     img: `img/deck/55_Six_of_Cups.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description: ``,
     meta_upright: `Revisiting the past, childhood memories, innocence, joy`,
     meta_reversed: `Living in the past, forgiveness, lacking playfulness`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-cups/six-of-cups/`
@@ -632,7 +641,8 @@ const rider_waite_cards =
     name: `The Seven of Cups`,
     number: 56,
     img: `img/deck/56_Seven_of_Cups.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description: ``,
     meta_upright: `Opportunities, choices, wishful thinking, illusion`,
     meta_reversed: `Alignment, personal values, overwhelmed by choices`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-cups/seven-of-cups/`
@@ -641,7 +651,8 @@ const rider_waite_cards =
     name: `The Eight of Cups`,
     number: 57,
     img: `img/deck/57_Eight_of_Cups.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description: ``,
     meta_upright: `Disappointment, abandonment, withdrawal, escapism`,
     meta_reversed: `Trying one more time, indecision, aimless drifting, walking away.`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-cups/eight-of-cups/`
@@ -650,7 +661,8 @@ const rider_waite_cards =
     name: `The Nine of Cups`,
     number: 58,
     img: `img/deck/58_Nine_of_Cups.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description: ``,
     meta_upright: `Contentment, satisfaction, gratitude, wish come true`,
     meta_reversed: `Inner happiness, materialism, dissatisfaction, indulgence`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-cups/nine-of-cups/`
@@ -659,7 +671,8 @@ const rider_waite_cards =
     name: `The Ten of Cups`,
     number: 59,
     img: `img/deck/59_Ten_of_Cups.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description: ``,
     meta_upright: `Divine love, blissful relationships, harmony, alignment`,
     meta_reversed: `Disconnection, misaligned values, struggling relationships`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-cups/ten-of-cups/`
@@ -668,7 +681,8 @@ const rider_waite_cards =
     name: `The Page of Cups`,
     number: 60,
     img: `img/deck/60_Page_of_Cups.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description: ``,
     meta_upright: `Creative opportunities, intuitive messages, curiosity, possibility`,
     meta_reversed: `New ideas, doubting intuition, creative blocks, emotional immaturity`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-cups/page-of-cups/`
@@ -677,7 +691,8 @@ const rider_waite_cards =
     name: `The Knight of Cups`,
     number: 61,
     img: `img/deck/61_Knight_of_Cups.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description: ``,
     meta_upright: `Creativity, romance, charm, imagination, beauty`,
     meta_reversed: `Overactive imagination, unrealistic, jealous, moody`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-cups/knight-of-cups/`
@@ -686,7 +701,8 @@ const rider_waite_cards =
     name: `The Queen of Cups`,
     number: 62,
     img: `img/deck/62_Queen_of_Cups.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description: ``,
     meta_upright: `Compassionate, caring, emotional stable, intuitive, in flow`,
     meta_reversed: `Inner feelings, self-care, self-love, co-dependency`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-cups/queen-of-cups/`
@@ -695,7 +711,8 @@ const rider_waite_cards =
     name: `The King of Cups`,
     number: 63,
     img: `img/deck/63_King_of_Cups.jpg`,
-    orientation: [], meta_description:
+    orientation: [],
+    meta_description: ``,
     meta_upright: `Emotionally balanced, compassionate, diplomatic`,
     meta_reversed: `Self-compassion, inner feelings, moodiness, emotional manipulative`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-cups/king-of-cups/`
@@ -705,6 +722,7 @@ const rider_waite_cards =
     number: 64,
     img: `img/deck/64_Ace_of_Swords.jpg`,
     orientation:[],
+    meta_description: ``,
     meta_upright: `Raw power, victory, break-throughs, mental clarity`,
     meta_reversed: `Confusion, chaos, lack of clarity`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/ace-of-swords/`
@@ -714,6 +732,7 @@ const rider_waite_cards =
     number: 65,
     img: `img/deck/65_Two_of_Swords.jpg`,
     orientation:[],
+    meta_description: ``,
     meta_upright: `Indecision, choices, truce, stalemate, blocked emotions`,
     meta_reversed: `Indecision, confusion, information overload`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/two-of-swords/`
@@ -723,6 +742,7 @@ const rider_waite_cards =
     number: 66,
     img: `img/deck/66_Three_of_Swords.jpg`,
     orientation:[],
+    meta_description: ``,
     meta_upright: `Painful separation, sorrow heartbreak, grief, rejection`,
     meta_reversed: `Releasing pain, optimism, forgiveness`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/three-of-swords/`
@@ -732,6 +752,7 @@ const rider_waite_cards =
     number: 67,
     img: `img/deck/67_Four_of_Swords.jpg`,
     orientation:[],
+    meta_description: ``,
     meta_upright: `Contemplation, recuperation, passivity, relaxation, rest`,
     meta_reversed: `Restlessness, burn-out, lack of progress`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/four-of-swords/`
@@ -741,6 +762,7 @@ const rider_waite_cards =
     number: 68,
     img: `img/deck/68_Five_of_Swords.jpg`,
     orientation:[],
+    meta_description: ``,
     meta_upright: `Conflict, tension, loss, defeat, win at all costs, betrayal`,
     meta_reversed: `Open to change, past resentment`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/five-of-swords/`
@@ -750,6 +772,7 @@ const rider_waite_cards =
     number: 69,
     img: `img/deck/69_Six_of_Swords.jpg`,
     orientation:[],
+    meta_description: ``,
     meta_upright: `Regretful but necessary transition, rite of passage`,
     meta_reversed: `Cannot move on, carrying baggage`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/six-of-swords/`
@@ -759,6 +782,7 @@ const rider_waite_cards =
     number: 70,
     img: `img/deck/70_Seven_of_Swords.jpg`,
     orientation:[],
+    meta_description: ``,
     meta_upright: `Betrayal, deception, getting away with something, stealth`,
     meta_reversed: `Mental challenges, breaking free`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/seven-of-swords/`
@@ -768,6 +792,7 @@ const rider_waite_cards =
     number: 71,
     img: `img/deck/71_Eight_of_Swords.jpg`,
     orientation:[],
+    meta_description: ``,
     meta_upright: `Isolation, self-imposed restriction, imprisonment`,
     meta_reversed: ` Open to new perspectives, release`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/eight-of-swords/`
@@ -777,6 +802,7 @@ const rider_waite_cards =
     number: 72,
     img: `img/deck/72_Nine_of_Swords.jpg`,
     orientation:[],
+    meta_description: ``,
     meta_upright: `Depression, nightmares, intense anxiety, despair`,
     meta_reversed: `Hopelessness, severe depression, torment`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/nine-of-swords/`
@@ -786,6 +812,7 @@ const rider_waite_cards =
     number: 73,
     img: `img/deck/73_Ten_of_Swords.jpg`,
     orientation:[],
+    meta_description: ``,
     meta_upright: `Back-stabbed, defeat, crisis, betrayal, endings, loss`,
     meta_reversed: `Recovery, regeneration, fear of ruin, inevitable end`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/ten-of-swords/`
@@ -795,6 +822,7 @@ const rider_waite_cards =
     number: 74,
     img: `img/deck/74_Page_of_Swords.jpg`,
     orientation:[],
+    meta_description: ``,
     meta_upright: `Talkative, curious, mentally restless, energetic`,
     meta_reversed: `All talk and no action, haste, undelivered promises`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/page-of-swords/`
@@ -804,6 +832,7 @@ const rider_waite_cards =
     number: 75,
     img: `img/deck/75_Knight_of_Swords.jpg`,
     orientation:[],
+    meta_description: ``,
     meta_upright: `Opinionated, hasty, action-oriented, communicative`,
     meta_reversed: `Scattered thought, disregard for consequences`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/knight-of-swords/`
@@ -813,6 +842,7 @@ const rider_waite_cards =
     number: 76,
     img: `img/deck/76_Queen_of_Swords.jpg`,
     orientation:[],
+    meta_description: ``,
     meta_upright: `Quick thinker, organised, perceptive, independent`,
     meta_reversed: `Overly-emotional, bitchy, cold-hearted`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/queen-of-swords/`
@@ -822,6 +852,7 @@ const rider_waite_cards =
     number: 77,
     img: `img/deck/77_King_of_Swords.jpg`,
     orientation:[],
+    meta_description: ``,
     meta_upright: `Clear thinking, intellectual power, authority, truth`,
     meta_reversed: `Manipulative, tyrannical, abusive`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-swords/king-of-swords/`
