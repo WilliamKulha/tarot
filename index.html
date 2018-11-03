@@ -18,24 +18,25 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="explanationModalLabel"><span class="card_name_here"></span></h5>
+              <h5 class="modal-title" id="explanationModalLabel"><span class="card_name_here"></span>
+              </h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
             <div class="modal-body">
-              <div class="text-center">
+              <div id="upright_meaning_div">
                 <h6>Upright Meaning</h6>
+                <p class="small"><span class="upright_meaning_here"></span></p>
               </div>
-              <p><span class="upright_meaning_here"></span></p>
-              <div class="text-center">
+              <div id="reversed_meaning_div">
                 <h6>Reversed Meaning</h6>
+                <p class="small"><span class="reversed_meaning_here"></span></p>
               </div>
-              <p><span class="reversed_meaning_here"></span></p>              
             </div>
             <div class="modal-footer">
+              <span class="more_info_link_here"></span>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <a href=<span class="more_info_link_here"></span>>More Information</a>
             </div>
           </div>
         </div>
@@ -48,9 +49,9 @@
       <div id="spread_choice">
         <div class="text-center">
           <div class="btn-group" role="group">
-            <button type="button" class="btn theme-color" id="three">Rule of Three</button>
-            <button type="button" class="btn btn-secondary" id="true_love">True Love</button>
-            <button type="button" class="btn theme-color" id="success">Success</button>
+            <button type="button" class="btn theme-color spread_button" id="three">Rule of Three</button>
+            <button type="button" class="btn btn-secondary spread_button" id="true_love">True Love</button>
+            <button type="button" class="btn theme-color spread_button" id="success">Success</button>
           </div>
         </div>
       </div>

@@ -51,7 +51,7 @@ body {
   filter: brightness(75%);
 }
 
-button {
+.spread_button {
   width:10em !important;
 }
 
@@ -64,10 +64,18 @@ button {
 }
 
 .drawn_card {
-  height: 75%;
-  width: 75%;
+  height: 70%;
+  width: 70%;
 }
 
 .drawn_card:hover {
   cursor:pointer;
+}
+
+.flipped {
+  transform: rotate(180deg);
+}
+
+.small {
+  font-size: .75em;
 }
