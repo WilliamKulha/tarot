@@ -92,4 +92,5 @@ body {
 .card_position {
   font-weight:bold;
   font-size:.75em;
+  max-width:210px;
 }
