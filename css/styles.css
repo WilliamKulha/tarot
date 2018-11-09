@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Slabo+27px');
+
 body {
   background-color: #D4E5EB;
+  font-family: 'Slabo 27px', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
 }
 
 #deck_area {

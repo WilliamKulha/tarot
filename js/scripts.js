@@ -275,7 +275,7 @@ const rider_waite_cards =
     number: 27,
     img: `img/deck/27_Six_of_Wands.jpg`,
     orientation: [],
-    meta_description: `The minor counterpart of the Chariot, the Six of Wands augurs public recognition for hard work and acheiving our gaols.`,
+    meta_description: `The minor counterpart of the Chariot, the Six of Wands augurs public recognition for hard work and acheiving our goals.`,
     meta_upright: `Public recognition, victory, progress, self-confidence`,
     meta_reversed: `Egotism, disrepute, lack of confidence, fall from grace`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-wands/six-of-wands/`
