@@ -13,7 +13,7 @@ $(function() {
 $(document).on("click",".drawn_card", function () {
     let clicked = $(this).attr('id');
     $('.card_name_here').html(drawnCards[clicked].name);
-    $('.img_here').html(`<img class="modal_card" src=${drawnCards[clicked].img} alt="${drawnCards[clicked].name}">`)
+    $('.img_here').html(`<img class="drawn_card" src=${drawnCards[clicked].img} alt="${drawnCards[clicked].name}">`)
     if (drawnCards[clicked].orientation === 1) {
       $(`modal_body`).find().children('img').addClass('flipped')
     }
