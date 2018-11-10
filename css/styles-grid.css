@@ -3,13 +3,83 @@
 body {
   background-color: #D4E5EB;
   font-family: 'Slabo 27px', serif;
+  margin:1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Cinzel', serif;
 }
 
+.header {
+  grid-area:header;
+}
+
+.new_reading_button {
+  grid-area:reading_button;
+}
+
+.card_of_the_day {
+  grid-area:card_of_the_day;
+}
+
+.footer {
+  grid-area:footer;
+}
+
+.quote {
+  grid-area:quote;
+}
+
+.wrapper {
+  display:grid;
+  grid-gap:1em;
+  grid-template-areas:
+  "header"
+  "quote"
+  "reading_button"
+  "card_of_the_day"
+  "footer"
+}
 
 .header {
   background-image: url("img/starsbg.jpg");
+  grid-row: 1;
+  text-align:center;
 }
+
+.quote {
+  font-size: .5em
+  grid-row:2;
+  text-align:right;
+}
+
+.new_reading_button {
+  grid-row: 2;
+  text-align: left;
+}
+
+blockquote p, footer {
+  font-size: .5em !important;
+}
+
+.card_of_the_day {
+grid-row-start:3;
+}
+
+.card_of_the_day h2 {
+  text-align:center;
+  font-size:100%;
+}
+
+
+/*
+for media query
+.wrapper {
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-areas:
+  "header header header header"
+  "reading_button reading_button"
+  "card_of_the_day card_of_the_day card_of_the_day card_of_the_day"
+  "footer footer footer footer"
+}
+*/
