@@ -135,7 +135,7 @@ const rider_waite_cards =
     number: 13,
     img: `img/deck/13_Death.jpg`,
     orientation: [],
-    meta_description: `Unlikely that this card actually represents a physical death. Typically it implies an end, possibly of a relationship or interest, and therefore implies an increased sense of self-awareness.`,
+    meta_description: `It is very unlikely that this card actually represents a physical death. Typically it implies an end, possibly of a relationship or interest, and therefore implies an increased sense of self-awareness.`,
     meta_upright: `Endings, change, transformation, transition`,
     meta_reversed: `Resistance to change, personal transformation, inner purging`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/major-arcana/death/`
