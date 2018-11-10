@@ -3,7 +3,6 @@
 //Function to populate modal with clicked card information.
 $(document).on("click",".drawn_card", function () {
    let clicked = $(this).attr('id');
-   console.log(clicked);
    $('.card_name_here').html(drawnCards[clicked].name);
    $('.img_here').html(`<img class="modal_card" src=${drawnCards[clicked].img} alt="${drawnCards[clicked].name}">`)
    if (drawnCards[clicked].orientation === 1) {

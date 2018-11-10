@@ -10,6 +10,28 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Cinzel', serif;
 }
 
+.modal-dialog {
+  padding-top: 15%;
+  padding-right:auto;
+  padding-left:auto;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.drawn_card {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:15px;
+}
+
+.drawn_card:hover {
+  cursor:pointer;
+}
+
+#upright_meaning_div {
+  margin-top:1em;
+}
 .header {
   grid-area:header;
 }
