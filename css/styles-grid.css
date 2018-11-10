@@ -10,12 +10,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Cinzel', serif;
 }
 
-.modal-dialog {
-  padding-top: 15%;
-  padding-right:auto;
-  padding-left:auto;
-  margin-left:auto;
-  margin-right:auto;
+.modal{
+  margin-left:1em;
+  margin-right:.5em;
 }
 
 .drawn_card {
