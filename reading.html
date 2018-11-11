@@ -14,7 +14,7 @@
     </head>
     <body>
            <!-- Disgusting bootstrap modal-->
-    <div class="modal fade" id="explanationModal" tabindex="-1" role="dialog" aria-labelledby="explanationModalLabel" aria-hidden="true">
+        <div class="modal fade" id="explanationModal" tabindex="-1" role="dialog" aria-labelledby="explanationModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
@@ -65,101 +65,26 @@
                 </div>
             </div>
             <!--Here is the deck div in horrible bootstrap-->
-            <div class="row justify-content-center">
-                <div class="col-xs-12 justify-content-center">
-                    <div id="deck_area justify-content-center">
-                        <img src="img/tarot_deck.jpg" class="deck rounded" alt="The back of the tarot deck." id="deckDraw">
-                    </div>
-                </div>
-            </div>
-            <!--Here are the different spreads designed to display properly with horrible bootstrap-->
-            <div class="spread_display">
-                <div id="rule_of_three">
+            <div class="container">
+                <div id="deck_here">
                     <div class="row">
-                        <div class="col-xs-4">
-                            <span class="1"></span>
-                            <p class="card_position"><span class="1_description"></p>
-                        </div>
-                        <div class="col-xs-4">
-                            <span class="2"></span>
-                            <p class="card_position"><span class="2_description"></p>
-                        </div>
-                        <div class="col-xs-4">
-                            <span class="3"></span>
-                            <p class="card_position"><span class="3_description"></p>
+                        <div class="col-xs-12">
+                            <div id="deck_area">
+                                <img src="img/tarot_deck.jpg" class="deck rounded" alt="The back of the tarot deck." id="deckDraw">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div id="true_love_spread">
-                    <div class="row justify-content-center">
-                        <div class="col-xs">
-                        </div>
-                        <div class="col-xs">
-                            <span class="1"></span>
-                            <p class="card_position"><span class="1_description"></span></p>
-                        </div>
-                        <div class="col-xs">
-                            <span class="2"></span>
-                            <p class="card_position"><span class="2_description"></span></p>
-                        </div>
-                        <div class="col-xs">
-                        </div>
+                <!--Here are the different spreads designed to display properly with horrible bootstrap-->
+                <div class="spread_display">
+                    <div id="rule_of_three">
+                        <span class="1 justify-content-center"></span>
+                        <span class="2 justify-content-center"></span>
+                        <span class="3 justify-content-center"></span>
                     </div>
-                    <div class="row justify-content-center">
-                        <div class="col-xs-3">
-                        </div>
-                        <div class="col-xs-2">
-                            <span class="3"></span>
-                            <p class="card_position"><span class="3_description"></p>
-                        </div>
-                        <div class="col-xs-2">
-                            <span class="4"></span>
-                            <p class="card_position"><span class="4_description"></span></p>
-                        </div>
-                        <div class="col-xs-2">
-                            <span class="5"></span>
-                            <p class="card_position"><span class="5_description"></span></p>
-                        </div>
-                        <div class="col-xs-3">
-                        </div>
+                    <div id="true_love_spread">
                     </div>
-                    <div class="row justify-content-center">
-                        <div class="col-xs-5">
-                        </div>
-                        <div class="col-xs-2">
-                            <span class="6"></span>
-                            <p class="card_position"><span class="6_description"></span></p>
-                        </div>
-                        <div class="col-xs-5">
-                        </div>
-                    </div>
-                </div>
-                <div id="success_spread">
-                    <div class="row">
-                        <div class="col-xs-2">
-                            <span class="4"></span>
-                            <p class="card_position"><span class="4_description"></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-2">
-                            <span class='2'></span>
-                            <p class="card_position"><span class="2_description"></p>
-                        </div>
-                        <div class="col-xs-2">
-                            <span class="1"></span>
-                            <p class="card_position"><span class="1_description"></p>
-                        </div>
-                        <div class="col-xs-2">
-                            <span class="3"></span>
-                            <p class="card_position"><span class="3_description"></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-xs-2">
-                            <span class="5"></span>
-                            <p class="card_position"><span class="5_description"></p>
-                        </div>
+                    <div id="success_spread">
                     </div>
                 </div>
             </div>

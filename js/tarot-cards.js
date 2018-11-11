@@ -75,8 +75,9 @@ checkIfAllDrawn = function() {
 }
 
 let hideAndShow = function() {
-  $(`#spread_choice`).slideUp();
-  $(`#deck_area`).slideDown();
+  $(`#spread_selection`).slideUp();
+  $(`#deck_here`).slideDown();
+  $(`.spread_display`).slideDown();
 }
 
 let spread = 0;
@@ -86,7 +87,7 @@ let drawnCards = [];
 
 $(function() {
   console.log(spread_position_description[0].position_descriptions[1])
-  $('#three').click(function() {
+  $('.rule_of_three').click(function() {
     spread = 3;
     hideAndShow();
     $('#rule_of_three').show();
