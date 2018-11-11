@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="id=edge">
+        <title>Madame Sosotris</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="css/reading.css" type="text/css">
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/tarot-cards.js"></script>
+    </head>
+    <body>
+           <!-- Disgusting bootstrap modal-->
+    <div class="modal fade" id="explanationModal" tabindex="-1" role="dialog" aria-labelledby="explanationModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="explanationModalLabel"><span class="card_name_here"></span>
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <span class="img_here"></span>
+                  <div id="upright_meaning_div">
+                    <h6>Upright Keywords</h6>
+                    <p class="small"><span class="upright_meaning_here"></span></p>
+                  </div>
+                  <div id="reversed_meaning_div">
+                    <h6>Reversed Keywords</h6>
+                    <p class="small"><span class="reversed_meaning_here"></span></p>
+                  </div>
+                  <h6>Description</h6>
+                  <p><span class="meta_description_here"></span></p>
+                <div class="modal-footer">
+                  <span class="more_info_link_here"></span>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper">
+            <div class="header">
+                <h1>Madame Sosotris</h1>
+                <hr>
+            </div>
+            <!-- Here is the menu for selecting a spread-->
+            <div id="spread_selection">
+                <div class="rule_of_three">
+                    <h6>Rule of Three</h6>
+                    <p>A reading which offers one card each for the past, present, and future</p>
+                </div>
+                <div class="true_love">
+                    <h6>True Love</h6>
+                    <p>A reading which offers advice about our love lives</p>
+                </div>
+                <div class="success">
+                    <h6>Success</h6>
+                    <p>A reading which offers insights into our current professional and personal struggles</p>
+                </div>
+            </div>
+            <!--Here is the deck div in horrible bootstrap-->
+            <div class="row justify-content-center">
+                <div class="col-xs-12 justify-content-center">
+                    <div id="deck_area justify-content-center">
+                        <img src="img/tarot_deck.jpg" class="deck rounded" alt="The back of the tarot deck." id="deckDraw">
+                    </div>
+                </div>
+            </div>
+            <!--Here are the different spreads designed to display properly with horrible bootstrap-->
+            <div class="spread_display">
+                <div id="rule_of_three">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <span class="1"></span>
+                            <p class="card_position"><span class="1_description"></p>
+                        </div>
+                        <div class="col-xs-4">
+                            <span class="2"></span>
+                            <p class="card_position"><span class="2_description"></p>
+                        </div>
+                        <div class="col-xs-4">
+                            <span class="3"></span>
+                            <p class="card_position"><span class="3_description"></p>
+                        </div>
+                    </div>
+                </div>
+                <div id="true_love_spread">
+                    <div class="row justify-content-center">
+                        <div class="col-xs">
+                        </div>
+                        <div class="col-xs">
+                            <span class="1"></span>
+                            <p class="card_position"><span class="1_description"></span></p>
+                        </div>
+                        <div class="col-xs">
+                            <span class="2"></span>
+                            <p class="card_position"><span class="2_description"></span></p>
+                        </div>
+                        <div class="col-xs">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xs-3">
+                        </div>
+                        <div class="col-xs-2">
+                            <span class="3"></span>
+                            <p class="card_position"><span class="3_description"></p>
+                        </div>
+                        <div class="col-xs-2">
+                            <span class="4"></span>
+                            <p class="card_position"><span class="4_description"></span></p>
+                        </div>
+                        <div class="col-xs-2">
+                            <span class="5"></span>
+                            <p class="card_position"><span class="5_description"></span></p>
+                        </div>
+                        <div class="col-xs-3">
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-xs-5">
+                        </div>
+                        <div class="col-xs-2">
+                            <span class="6"></span>
+                            <p class="card_position"><span class="6_description"></span></p>
+                        </div>
+                        <div class="col-xs-5">
+                        </div>
+                    </div>
+                </div>
+                <div id="success_spread">
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <span class="4"></span>
+                            <p class="card_position"><span class="4_description"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <span class='2'></span>
+                            <p class="card_position"><span class="2_description"></p>
+                        </div>
+                        <div class="col-xs-2">
+                            <span class="1"></span>
+                            <p class="card_position"><span class="1_description"></p>
+                        </div>
+                        <div class="col-xs-2">
+                            <span class="3"></span>
+                            <p class="card_position"><span class="3_description"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-2">
+                            <span class="5"></span>
+                            <p class="card_position"><span class="5_description"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

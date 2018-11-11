@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Slabo+27px');
+
+body {
+  background-color: #D4E5EB;
+  font-family: 'Slabo 27px', serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cinzel', serif;
+}
+
+
+.drawn_card {
+  height:20%;
+  width:20;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius:15px;
+  margin:auto;
+}
+
+.drawn_card:hover {
+  cursor:pointer;
+}
+
+.header {
+  grid-area:header;
+  margin:1em;
+}
+
+.rule_of_three {
+    grid-area: rule_of_three;
+}
+
+.true_love {
+    grid-area:true_love;
+}
+
+.success {
+    grid-area:success;
+}
+
+.deckspot {
+    grid-area:deck;
+}
+
+.spread_display {
+    grid-area:spreads;
+}
+
+.footer {
+    grid-area:footer;
+}
+
+.wrapper {
+  display:grid;
+  grid-row-gap:0;
+  grid-template-areas:
+  "header"
+  "spread_selection"
+  "deck"
+  "spreads"  
+  "footer"
+}
+
+.header {
+    grid-row: 1;
+    text-align:center;
+  }  
+
+#spread_selection {
+    grid-row-start:2;
+    display:grid;
+    grid-row-gap:none;
+    grid-template-areas:
+    "rule_of_three"
+    "true_love"
+    "success"
+}
+#spread_selection > div > p {
+    font-size: .75em;
+    font-weight: lighter;
+    font-style:italic;
+    padding-left:1em;
+    padding-right:1em;
+}
+
+#spread_selection > div > h6 {
+    padding-left:.7em;
+    padding-right:.5em;
+    padding-top:.3em;
+}
+
+#spread_selection > div:hover {
+    cursor:pointer;
+}
+
+#spread_selection > div:nth-child(odd) {
+    background-color: #bfced3;
+}
+
+.spread_display {
+    display:none;
+}
+
+/*#deck_area {
+    display:none;
+}
+*/
+.deck {
+    margin-top:3em;
+    height: 25%;
+    width:25%;
+    border-radius: 15px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.deck::after {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.deck:hover {
+    cursor:pointer;
+    -webkit-transform: scale(1.25, 1.25);
+    transform: scale(1.25, 1.25);
+}
+
+.deck:hover::after {
+    opacity: 1;
+}
