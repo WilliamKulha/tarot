@@ -11,7 +11,8 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .drawn_card {
-  min-height:144px;
+  min-height:194px;
+  min-width:112px;
   max-width:85%;
   display:block;
   margin-left:auto;
@@ -138,9 +139,11 @@ h1, h2, h3, h4, h5, h6 {
 
 #rule_of_three {
     margin:.5em;
+    grid-gap:.2em;
     display:grid;
     grid-template-columns: 1 1 1;
     grid-template-areas: 
+    "firstd secondd thirdd"
     "first second third"
     
 }
@@ -156,3 +159,22 @@ h1, h2, h3, h4, h5, h6 {
 #rule_of_three [class="3"]  {
     grid-area: third;
 }
+
+#rule_of_three > p [class="1_description"] {
+    grid-area: firstd
+}
+
+#rule_of_three > p [class="2_description"] {
+    grid-area: secondd
+}
+
+#rule_of_three > p [class="3_description"] {
+    grid-area: thirdd
+}
+
+.card_position {
+    font-weight:bold;
+    font-size:.8em;
+    max-width:210px;
+    text-align:center;
+  }
