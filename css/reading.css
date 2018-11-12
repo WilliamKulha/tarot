@@ -9,23 +9,43 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Cinzel', serif;
 }
 
+.modal_card {
+    height:70%;
+    width:70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:0.5em;
+}
 
 .drawn_card {
-  min-height:194px;
-  min-width:112px;
-  max-width:85%;
+  max-height:194px;
+  max-width:112px;
   display:block;
-  margin-left:auto;
-  margin-right:auto;
+  margin-left:.01em;
+  margin-right:.01em;
+  margin-bottom:auto;
   border-radius:10px;
+  margin-top:0.01em;
 }
 
 .flipped {
     transform: rotate(180deg);
-  }
+}
 
 .drawn_card:hover {
   cursor:pointer;
+}
+/*Style for the text above the cards*/
+.card_position {
+    font-weight:bold;
+    font-size:.7em;
+    max-width:109px;
+    text-align:center;
+    margin-bottom:0;
+    margin-top:0;
 }
 
 .header {
@@ -109,8 +129,15 @@ h1, h2, h3, h4, h5, h6 {
     display:none;
 }
 
+#deck_area {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+}
+
 .deck {
-    margin-top:3em;
+    margin-top:2.5em;
     height: 25%;
     width:25%;
     border-radius: 15px;
@@ -139,7 +166,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #rule_of_three {
     margin:.5em;
-    grid-gap:.2em;
+    grid-gap:.75em;
     display:grid;
     grid-template-columns: 1 1 1;
     grid-template-areas: 
@@ -150,31 +177,105 @@ h1, h2, h3, h4, h5, h6 {
 
 #rule_of_three [class="1"] {
     grid-area: first;
+    grid-column: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #rule_of_three [class="2"] {
     grid-area: second;
+    grid-column:2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #rule_of_three [class="3"]  {
     grid-area: third;
+    grid-column:3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #rule_of_three > p [class="1_description"] {
-    grid-area: firstd
+    grid-area: firstd;
+    grid-column:1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #rule_of_three > p [class="2_description"] {
-    grid-area: secondd
+    grid-area: secondd;
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #rule_of_three > p [class="3_description"] {
-    grid-area: thirdd
+    grid-area: thirdd;
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.card_position {
-    font-weight:bold;
-    font-size:.8em;
-    max-width:210px;
-    text-align:center;
-  }
+#true_love_spread {
+    margin:.5em;
+    grid-gap:.5em;
+    display:inline-grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "first second"
+    "third fourth fifth"
+    "sixth"   
+}
+
+#tl_first_card {
+    grid-row: 1;
+    grid-column: 1/2;
+
+}
+
+#tl_second_card {
+    grid-row:1;
+    grid-column:3/4;
+
+}
+
+#tl_third_card   {
+    grid-row:2;
+
+}
+
+#tl_fourth_card {
+    grid-row:2;
+
+}
+
+#tl_fifth_card {
+    grid-row:2;
+}
+
+#tl_sixth_card {
+    grid-row:3;
+    grid-column:2;
+
+}ß
+
+#tl_first_card, #tl_second_card, #tl_third_card, #tl_fourth_card, #tl_fifth_card, #tl_sixth_card > img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#tl_first_card, #tl_second_card, #tl_third_card, #tl_fourth_card, #tl_fifth_card, #tl_sixth_card > p {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    padding:0;
+}

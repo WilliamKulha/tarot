@@ -784,7 +784,7 @@ const rider_waite_cards =
 const spread_position_description = [
   {
     name: `true_love`,
-    position_descriptions: [`Your and your feelings`, `Your partner and their feelings`, `What connects the two of you`, `What keeps your relationship together`, `The issues you need to address`, `Will it work?`]
+    position_descriptions: [`Your and your feelings`, `Your partner and their feelings`, `What connects the two of you`, `What keeps you together`, `The issues you need to address`, `Will it work?`]
   },
   {
     name: `rule_of_three`,

@@ -5,8 +5,9 @@ $(document).on("click",".drawn_card", function () {
    let clicked = $(this).attr('id');
    $('.card_name_here').html(drawnCards[clicked].name);
    $('.img_here').html(`<img class="modal_card" src=${drawnCards[clicked].img} alt="${drawnCards[clicked].name}">`)
-   if (drawnCards[clicked].orientation === 1) {
-     $(`modal_body`).find().children('img').addClass('flipped')
+   console.log(drawnCards[clicked].orientation)
+   if (drawnCards[clicked].orientation[0] === 1) {
+     $(`.img_here>img`).addClass('flipped')
    }
    $('.reversed_meaning_here').text(drawnCards[clicked].meta_reversed);
    $('.upright_meaning_here').text(drawnCards[clicked].meta_upright);
@@ -68,7 +69,7 @@ let drawSuccess = function() {
 
 checkIfAllDrawn = function() {
   if (drawnCards.length === spread) {
-    $(`#deck_area`).slideUp();
+    $(`#deck_here`).slideUp();
   } else {
     return false
   }
@@ -76,7 +77,7 @@ checkIfAllDrawn = function() {
 
 let hideAndShow = function() {
   $(`#spread_selection`).slideUp();
-  $(`#deck_here`).slideDown();
+  $(`#deck_here`).show();
   $(`.spread_display`).slideDown();
 }
 
@@ -96,7 +97,7 @@ $(function() {
       checkIfAllDrawn();
     });
   });
-  $('#true_love').click(function() {
+  $('.true_love').click(function() {
     spread = 6;
     hideAndShow();
     $('#true_love_spread').show();
