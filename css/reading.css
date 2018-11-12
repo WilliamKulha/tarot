@@ -264,7 +264,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-row:3;
     grid-column:2;
 
-}ß
+}
 
 #tl_first_card, #tl_second_card, #tl_third_card, #tl_fourth_card, #tl_fifth_card, #tl_sixth_card > img{
     display: flex;
