@@ -10,12 +10,16 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Cinzel', serif;
 }
 
+.header > h1:hover {
+  cursor:pointer;
+}
+
 .modal{
 }
 
 .drawn_card {
-  height:70%;
-  width:70%;
+  height:auto;
+  width:auto;
   display:block;
   margin-left:auto;
   margin-right:auto;
@@ -59,6 +63,18 @@ h1, h2, h3, h4, h5, h6 {
   "reading_button"
   "card_of_the_day"
   "footer"
+}
+
+#footer {
+  grid-area: footer;
+  position:fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin-top:5em;
+  padding:.5rem;
+  text-align:center;
+  background-color: #bfced3;
 }
 
 .header {

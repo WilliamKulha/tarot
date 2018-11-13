@@ -1,5 +1,10 @@
 //Business Logic
 
+//Redirect for clicking the header
+let goHome = function() {
+  window.location.href = "splash.html";
+}
+
 //Function to populate modal with clicked card information.
 $(document).on("click",".drawn_card", function () {
    let clicked = $(this).attr('id');
@@ -70,6 +75,7 @@ let drawSuccess = function() {
 checkIfAllDrawn = function() {
   if (drawnCards.length === spread) {
     $(`#deck_here`).slideUp();
+    $(`.new_reading_button`).show();
   } else {
     return false
   }

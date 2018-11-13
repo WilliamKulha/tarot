@@ -3,6 +3,7 @@
 body {
   background-color: #D4E5EB;
   font-family: 'Slabo 27px', serif;
+  height:100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -38,6 +39,10 @@ h1, h2, h3, h4, h5, h6 {
 .drawn_card:hover {
   cursor:pointer;
 }
+
+.header > h1:hover {
+  cursor:pointer;
+}
 /*Style for the text above the cards*/
 .card_position {
     font-weight:bold;
@@ -46,6 +51,18 @@ h1, h2, h3, h4, h5, h6 {
     text-align:center;
     margin-bottom:0;
     margin-top:0;
+}
+
+.wrapper {
+  flex-grow:1;
+  display:grid;
+  grid-row-gap:0;
+  grid-template-areas:
+  "header"
+  "spread_selection"
+  "deck"
+  "spreads"
+  "footer"
 }
 
 .header {
@@ -74,24 +91,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer {
-    grid-area:footer;
-}
-
-.wrapper {
-  display:grid;
-  grid-row-gap:0;
-  grid-template-areas:
-  "header"
-  "spread_selection"
-  "deck"
-  "spreads"  
-  "footer"
+  grid-area: footer;
+  text-align:center;
 }
 
 .header {
     grid-row: 1;
     text-align:center;
-  }  
+  }
 
 #spread_selection {
     grid-row-start:2;
@@ -169,10 +176,10 @@ h1, h2, h3, h4, h5, h6 {
     grid-gap:.75em;
     display:grid;
     grid-template-columns: 1 1 1;
-    grid-template-areas: 
+    grid-template-areas:
     "firstd secondd thirdd"
     "first second third"
-    
+
 }
 
 #rule_of_three [class="1"] {
@@ -231,7 +238,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-areas:
     "first second"
     "third fourth fifth"
-    "sixth"   
+    "sixth"
 }
 
 #tl_first_card {
@@ -298,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-areas:
     "fourth"
     "second first third"
-    "fifth";   
+    "fifth";
 }
 
 #suc_first {
@@ -345,6 +352,10 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     margin:0;
-    padding:0;   
+    padding:0;
 }
 
+.new_reading_button {
+  display:none;
+  margin:1em;
+}

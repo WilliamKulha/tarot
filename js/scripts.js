@@ -792,6 +792,6 @@ const spread_position_description = [
   },
   {
     name: `success`,
-    position_descriptions: [`The heart of the problem at hand`, `Your present challenge`, `Underlying problems`, `What can help you`, `What you need to do to increase your chance of success`]
+    position_descriptions: [`The problem's root`, `Your present challenge`, `Underlying problems`, `What can help you`, `What you need to do to increase your chance of success`]
   }
 ]
