@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
     height:70%;
     width:70%;
     display: flex;
-    align-items: center;
+    align-items: center;ß
     justify-content: center;
     margin-left:auto;
     margin-right:auto;
@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5, h6 {
 .drawn_card {
   max-height:194px;
   max-width:112px;
-  display:block;
+  display:flex;
   margin-left:.01em;
   margin-right:.01em;
   margin-bottom:auto;
@@ -235,32 +235,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #tl_first_card {
+    grid-area:first;
     grid-row: 1;
     grid-column: 1/2;
 
 }
 
 #tl_second_card {
+    grid-area:second;
     grid-row:1;
     grid-column:3/4;
 
 }
 
 #tl_third_card   {
+    grid-area:third;
+    grid-column: 1;
     grid-row:2;
 
 }
 
 #tl_fourth_card {
+    grid-area:fourth;
+    grid-column:2;
     grid-row:2;
 
 }
 
 #tl_fifth_card {
+    grid-area:fifth;
+    grid-column:3;
     grid-row:2;
 }
 
 #tl_sixth_card {
+    grid-area:sixth;
     grid-row:3;
     grid-column:2;
 
@@ -279,3 +288,63 @@ h1, h2, h3, h4, h5, h6 {
     margin:0;
     padding:0;
 }
+
+#success_spread {
+    display:grid;
+    margin:.5em;
+    grid-gap:.5em;
+    display:inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "fourth"
+    "second first third"
+    "fifth";   
+}
+
+#suc_first {
+    grid-area:first;
+    grid-row: 2;
+    grid-column: 2;
+
+}
+
+#suc_second {
+    grid-area:second;
+    grid-row:2;
+    grid-column:1;
+
+}
+
+#suc_third   {
+    grid-area:third;
+    grid-column: 3;
+    grid-row:2;
+
+}
+
+#suc_fourth {
+    grid-area:fourth;
+    grid-column:1;
+    grid-row:1;
+}
+
+#suc_fifth {
+    grid-area:fifth;
+    grid-column:1;
+    grid-row:3;
+}
+
+#suc_first, #suc_second, #suc_third, #suc_fourth, #suc_fifth > img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#suc_first, #suc_second, #suc_third, #suc_fourth, #suc_fifth > p {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+    padding:0;   
+}
+

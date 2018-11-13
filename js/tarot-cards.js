@@ -100,15 +100,18 @@ $(function() {
   $('.true_love').click(function() {
     spread = 6;
     hideAndShow();
+    $(`#rule_of_three`).hide();
     $('#true_love_spread').show();
     $(`#deckDraw`).click(function() {
       drawTrueLove();
       checkIfAllDrawn();
     });
   });
-  $(`#success`).click(function() {
+  $(`.success`).click(function() {
     spread = 5;
     hideAndShow();
+    $(`#rule_of_three`).hide();
+    $(`#true_love_spread`).hide();
     $('#success_spread').show();
     $(`#deckDraw`).click(function() {
       drawSuccess();
