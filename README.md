@@ -1,12 +1,12 @@
 # _Madame Sosotris Tarot Reader_
 
-#### _A progressive web application for tarot drawings 11-14-2018_
+#### _A webpage for tarot drawings 11-14-2018_
 
 #### By _**William Kulha**_
 
 ## Description
 
-_A 'week-long' (read: several-weeks-long) project for learnhowtoprogram.com. This progressive web application / website allows users to get tarot readings._\
+_A 'week-long' (read: several-weeks-long) project for learnhowtoprogram.com. This website allows users to get tarot readings._\
 _At the moment there are three different spreads to choose from, and only the Rider-Waite deck (because it's in the public domain). The links for more information all lead to Biddy Tarot, but they also have onscreen keyword displays and short descriptions._\
 _Cards have a 50/50 chance of being drawn right-side-up or upside-down. Currently this feature cannot be disabled._\
 _If people like using Madame Sosotris, I wouldn't be opposed to adding more spreads, more sources._
@@ -22,7 +22,8 @@ _If people like using Madame Sosotris, I wouldn't be opposed to adding more spre
 ## Planned Future Features
 
 _Adding additional spreads_\
-_Responsive design for proper display on desktop computers_
+_Responsive design for proper display on desktop computers_\
+_Adding sw-precache and gulp to make the site run as a progressive web app._
 
 ## Known Bugs
 
