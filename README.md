@@ -36,7 +36,7 @@ _If you have any questions, advice, or requests for features, please email me at
 
 _javaScript_\
 _jQuery_\
-_Bootstrap 4_\
+_Bootstrap 4_
 
 
 ### License
