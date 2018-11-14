@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="id=edge">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <title>Madame Sosotris</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/styles-grid.css" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/splash.js"></script>
+  </head>
+  <body>
+    <!-- Disgusting bootstrap modal-->
+    <div class="modal fade" id="explanationModal" tabindex="-1" role="dialog" aria-labelledby="explanationModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="explanationModalLabel"><span class="card_name_here"></span>
+              </h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <span class="img_here"></span>
+              <div id="upright_meaning_div">
+                <h6>Upright Keywords</h6>
+                <p class="small"><span class="upright_meaning_here"></span></p>
+              </div>
+              <div id="reversed_meaning_div">
+                <h6>Reversed Keywords</h6>
+                <p class="small"><span class="reversed_meaning_here"></span></p>
+              </div>
+              <h6>Description</h6>
+              <p><span class="meta_description_here"></span></p>
+            <div class="modal-footer">
+              <span class="more_info_link_here"></span>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <!-- Header For Web App-->
+      <div class="header">
+          <h1 onclick="goHome()">madame sosotris</h1>
+          <hr>
+      </div>
+      <div class="quote">
+        <blockquote class="blockquote">
+          <p class="mb-0">
+            Madame Sosotris, famous clairvoyante,
+            <br>
+            Had a bad cold, nevertheless
+            <br>
+            Is known the be the wisest woman in Europe,
+            <br>
+            With a wicked pack of cards. Here, said she,
+            <br>
+            Is your card
+          </p>
+          <footer class="blockquote-footer">T.S. Eliot</footer>
+        </blockquote>
+      </div>
+      <div class="new_reading_button">
+        <a href="reading.html" class="btn btn-dark">New Reading</a>
+      </div>
+      <div class="card_of_the_day">
+        <hr>
+        <h2>card of the moment</h2>
+        <span class="card_image_here"></span>
+      </div>
+      <div id="footer">
+        <footer>
+          <small>&copy; Copyright 2018, William Kulha</small>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
