@@ -2,7 +2,7 @@
 
 //Redirect for clicking the header
 let goHome = function() {
-  window.location.href = "splash.html";
+  window.location.href = "index.html";
 }
 
 //Function to populate modal with clicked card information.
