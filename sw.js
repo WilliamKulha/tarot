@@ -1,4 +1,4 @@
-const staticAssests = [
+const staticAssets = [
     './',
     './img',
     './css',
