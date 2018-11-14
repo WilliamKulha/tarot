@@ -1,7 +1,7 @@
 {
   "name": "Madame Sosotris",
   "short_name": "Sosotris",
-  "start_url": "splash.html",
+  "start_url": "index.html",
   "display": "standalone",
   "background_color": "#D4E5EB",
   "description": "A Tarot Reading assistant",
