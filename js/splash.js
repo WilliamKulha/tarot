@@ -2,6 +2,14 @@ let spread = 1;
 let drawnCards = [];
 
 $(function() {
+    if ('serviceWorker' in navigator) {
+        try {
+          navigator.serviceWorker.register('sw.js')
+          console.log('SW registered')
+        } catch (error) {
+          console.log('SW reg failed.')
+        }
+      }
     let currentCardNumber = Math.floor((Math.random() * 77) + 0);
     drawnCards.push(rider_waite_cards[currentCardNumber]);
     const currentCard = rider_waite_cards[currentCardNumber];
