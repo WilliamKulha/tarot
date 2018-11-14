@@ -1,5 +1,14 @@
 //Business Logic
+//try for the service worker
 
+if('serviceWorker' in navigator) {
+  try {
+    navigator.serviceWorker.register('sw.js')
+    console.log('SW registered')
+  } catch (error) {
+    console.log('SW reg failed.')
+  }
+}
 //Redirect for clicking the header
 let goHome = function() {
   window.location.href = "index.html";
