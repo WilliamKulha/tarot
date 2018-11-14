@@ -495,7 +495,7 @@ const rider_waite_cards =
     number: 49,
     img: `img/deck/49_King_of_Pentacles.jpg`,
     orientation: [],
-    meta_description: `Industrious and regal, the King of Pentacles is a sign of worldly success and fruition. We should, however, note <em>how</em> the King as achieved his success. Frugal and responsible, let him remind us to remain careful in our pursuits and to never over-extend ourselves.`,
+    meta_description: `Industrious and regal, the King of Pentacles is a sign of worldly success and fruition. We should, however, note how the King as achieved his success. Frugal and responsible, let him remind us to remain careful in our pursuits and to never over-extend ourselves.`,
     meta_upright: `Wealth, business, leadership, security, discipline, abundance`,
     meta_reversed: `Financially inept, obsessed with wealth and status, stubborn`,
     meta_more_info_link: `https://www.biddytarot.com/tarot-card-meanings/minor-arcana/suit-of-pentacles/king-of-pentacles/`
